@@ -1,0 +1,291 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+@font-face {
+    font-family: AllOrNothing;
+    src: url("Rantika-RpwX6.ttf");
+}
+
+#titlething {
+    position: relative;
+    font-size:60px;
+    max-width:100%;
+    
+    background-color: black;
+    font-family: AllOrNothing;
+    color: white;
+    z-index: 1;
+}
+
+.group {
+    position: absolute;
+    width:100%;
+    background-color: rgb(20, 18, 18);
+    padding-top:50px;
+    z-index:0;
+    
+}
+
+.subgroupa {
+    display:flex;
+    justify-content: space-around;
+    margin-top: 100px;
+}
+
+.subgroupb {
+    display:flex;
+    justify-content: space-around;
+    margin-top: 100px;
+}
+
+
+.imgroll {
+    max-width: 200px;
+    border: 1px solid rgb(124, 124, 124);
+}
+
+#lol {
+    text-align:center;
+    font-size:30px;
+    display:block;
+    color:white;
+
+}
+
+.group2 {
+    position: relative;
+    display:flex;
+    justify-content: flex-start;
+    width:100%;
+    background-color: rgb(21, 21, 21);
+    border-top: 1px solid grey;
+    padding-top:50px;
+    padding-bottom:200px;
+    z-index: 2;
+    margin-top: 200px;
+}
+
+
+
+.textgroupa {
+    position: relative;
+    font-size: 20px;
+    font-style: bold;
+    display:flex;
+    justify-content: space-around;
+    color: white;
+    transform: translateY(-215px);
+}
+
+.textgroupb {
+    position: relative;
+    font-size: 20px;
+    font-style: bold;
+    display:flex;
+    justify-content: space-around;
+    color: white;
+}
+
+
+
+#rollone {
+    font-size: 50px;
+    width: 250px;
+    margin-left: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s, border 0.2s, color 0.2s;
+}
+
+#rollten {
+    font-size: 50px;
+    width: 250px;
+    margin-left: 100px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s, border 0.2s, color 0.2s;
+}
+
+#counter {
+    font-size: 50px;
+    width: 250px;
+    margin-left: 100px;
+    color: white;
+}
+
+#rollone:hover {
+    background-color: purple;
+    transform: translateY(-10px);
+    color: white;
+    border: 2px white solid;
+}
+
+#rollten:hover {
+    background-color: gold;
+    transform: translateY(-10px);
+    color: white;
+    border: 2px white solid;
+}
+
+@media (min-width: 400px) {
+    #titlething {
+        position: relative;
+        font-size:40px;
+        width:100%;
+        padding-right: 225px;
+        background-color: black;
+        font-family: AllOrNothing;
+        color: white;
+        z-index: 1;
+    }
+
+    .imgroll {
+        max-width: 80px;
+        margin-left: 15px;
+    }
+
+    .group {
+        width:100%;
+    }
+    
+    body {
+        background-color: rgb(20, 18, 18);
+    }
+
+    .textgroupa {
+        transform: translateY(-160px);
+        font-size: 10px;
+    }
+    
+    .textgroupb {
+        font-size: 10px;
+    }
+
+    .textgroupa p {
+        margin-left:30px;
+    }
+
+    .textgroupb p {
+        margin-left:30px;
+    }
+
+    .group2 {
+        padding-right: 120px;
+    }
+
+
+    
+}
+
+@media (min-width: 768px) {
+    #titlething {
+        position: relative;
+        font-size:40px;
+        width:100%;
+        padding-right: 225px;
+        background-color: black;
+        font-family: AllOrNothing;
+        color: white;
+        z-index: 1;
+    }
+
+    .imgroll {
+        max-width: 100px;
+        margin-left: 15px;
+    }
+
+    .group {
+        width:100%;
+    }
+    
+    body {
+        background-color: rgb(20, 18, 18);
+    }
+
+    .textgroupa {
+        transform: translateY(-160px);
+        font-size: 10px;
+    }
+    
+    .textgroupb {
+        font-size: 10px;
+    }
+
+    .textgroupa p {
+        margin-left:30px;
+    }
+
+    .textgroupb p {
+        margin-left:30px;
+    }
+
+    .group2 {
+        padding-right: 60px;
+    }
+
+    #rollten {
+        font-size: 40px;
+    }
+
+
+    
+}
+
+@media (min-width: 1366px) {
+    #titlething {
+        position: relative;
+        font-size:40px;
+        width:83.3%;
+        background-color: black;
+        font-family: AllOrNothing;
+        color: white;
+        z-index: 1;
+    }
+
+    .imgroll {
+        max-width: 200px;
+        margin-left: 15px;
+    }
+
+    .group {
+        width:100%;
+    }
+    
+    body {
+        background-color: rgb(20, 18, 18);
+    }
+
+    .textgroupa {
+        transform: translateY(-280px);
+        font-size: 20px;
+    }
+    
+    .textgroupb {
+        font-size: 20px;
+    }
+
+    .textgroupa p {
+        margin-left:30px;
+    }
+
+    .textgroupb p {
+        margin-left:30px;
+    }
+
+
+    #rollten {
+        font-size: 50px;
+        width: 250px;
+    }
+
+    .group2 {
+        width:95.5%;
+    }
+
+    body {
+        background: none;
+    }
+    
+}
+
+
