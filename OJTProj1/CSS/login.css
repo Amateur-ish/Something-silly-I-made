@@ -1,0 +1,170 @@
+Jiamwayne Amor
+*
+{
+  margin: 0;
+  padding: 0;
+}
+
+form
+{
+  border: 1px solid blue; 
+  border-radius: 10px;
+  background-color: white;
+  text-align: center;
+  margin: 45px;
+}
+
+form:hover
+{
+  box-shadow: 2px 2px 6px black;
+}
+
+header
+{
+  display: inline;
+  position: fixed;
+  margin: 30px;
+}
+
+header img
+{
+  border: 1px solid yellow;
+  border-radius: 100px;
+  float: left;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+header p
+{
+  font-size: 17px;
+  color: navy;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+div b
+{
+  font-size: 17px;
+}
+
+div span
+{
+  font-size: 13px;
+}
+
+input
+{
+  width: 60%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 3px solid;
+}
+
+input:hover
+{
+  box-shadow: 2px 2px 4px black;
+}
+
+input:focus
+{
+  border: 6px solid #0d6efd;
+}
+
+label
+{
+  display: block;
+  padding-left: 15px;
+  text-indent: -15px;
+}
+
+input[type=checkbox]
+{
+  width: 22px;
+  height: 22px;
+  padding: 0;
+  margin: 0;
+  margin-right: 8px;
+  vertical-align: bottom;
+  position: relative;
+  top: -1px;
+  overflow: hidden;
+}
+
+input[type=checkbox]:hover
+{
+  box-shadow: 1px 2px 3px;
+}
+
+div button
+{
+  display: inline;
+}
+
+div button:hover
+{
+  transition: 1s;
+}
+
+.cancel-btn
+{
+  font-size: 18px;
+  border: 2px solid blue;
+  float: left;
+  margin-left: 10px;
+  background-color: #0d6efd;
+  padding: 15px;
+  border-radius: 50px;
+  color: yellow;
+}
+
+.cancel-btn:hover
+{
+  background-color: #FF3131;
+}
+
+.need-help-btn
+{
+  font-size: 18px;
+  border: 2px solid blue;
+  float: right;
+  margin-right: 10px;
+  background-color: #0d6efd;
+  padding: 15px;
+  border-radius: 50px;
+  color: yellow;
+}
+
+.need-help-btn:hover
+{
+  background-color: blue;
+}
+
+span button
+{
+  width: 60%;
+  padding: 20px;
+  background-color: #0d6efd;
+  color: yellow;
+  font-weight: bold;
+}
+
+span button:hover
+{
+  background-color: navy;
+  transition: 1s;
+}
+
+div a
+{
+  color: #0d6efd;
+  text-decoration: none;
+}
+
+div a:hover
+{
+  color: navy;
+  text-decoration: underline;
+  transition: 1s;
+}

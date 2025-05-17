@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Faculty Attendance Monitoring Sheet - Search</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css
+  "
+      integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css
+  "
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+    <link rel="stylesheet" href="/ojtproj1/css/search1.css" />
+  </head>
+  <body>
+
+   
+    <!-- Header -->
+
+    <header class="container-fluid position-fixed pb-4">
+      <div class="input-field">
+        <!-- <datalist id="faculty-members-list" role="listbox">
+              <option value="Mr. Dean Federic D. Yulo"></option>
+              <option value="Mr. Tristan C. Unabia"></option>
+              <option value="Mr. Ar-Jay Agbayani"></option>
+              <option value="Mr. Orlando Jr. C. Agbisit"></option>
+              <option value="Mr. Gerard Bartolome"></option>
+              <option value="Mr. Federic Peregrino Baysa"></option>
+              <option value="Ms. Perine Dela Cruz"></option>
+              <option value="Ms. Regina Kate Dominguez"></option>
+            </datalist>
+          </div> -->
+      </div>
+
+      <ul class="p-3 m-2 text-primary font-weight-bold">
+        <li>
+          <a href="/ojtproj1/mainpages/help.php" class="float-right">Help</a>
+        </li>
+        <li>
+          <a href="/ojtproj1/mainpages/newsearch.html" class="float-left"
+            >Search</a
+          >
+        </li>
+      </ul>
+    </header>
+    <div style="padding-top:100px">
+
+    </div>
+    <input
+      list="faculty-members-list"
+      type="text"
+      id="searchbar"
+      placeholder="Search for a faculty member. "
+      class="my-4 input-boxes d-flex align-self-center"
+    />
+
+    <main
+      id="output"
+      class="mt-5 container-fluid d-flex justify-content-start"
+      style="flex-wrap: wrap !important"
+    ></main>
+
+     <!-- Modal -->
+
+     <!-- Profile -->
+    <div class="modal fade" id="profilething" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdrop" aria-hidden="true">
+      <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+          <div class="modal-header bg-primary">
+            <h5 class="modal-title text-light" id="staticBackdropLabel">Profile</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-12 col-xl-5 d-flex align-items-center">
+                <img src="/ojtproj1/back-end/uploads/17fe1ca1367a7c6de863663a3538100b.jpg" alt="Profile Picture" 
+                style="object-fit: cover; margin: 0 auto"
+                id="profielpicture"
+                width="350" height="500" />
+              </div>
+              <div class="col-12 col-xl-7">
+                <div class="container underline mt-5"></div>
+                <h3 class="text-center display-6" style="font-size: 25px">Full Name</h3>
+                <h3 class="text-center" id="fullname_memb">Placeholder</h3>
+                
+                <div class="container underline mt-5"></div>
+                <h3 class="text-center display-6" style="font-size: 25px">Employee ID</h3>
+                <h3 class="text-center" id="employeeid_memb">Placeholder</h3>
+
+                <div class="container underline mt-5"></div>
+                <h3 class="text-center display-6" style="font-size: 25px">Email</h3>
+                <h3 class="text-center" id="email_memb">Placeholder</h3>
+
+                <div class="container underline mt-5"></div>
+                <h3 class="text-center display-6" style="font-size: 25px">Phone Number</h3>
+                <h3 class="text-center" id="phone_memb">Placeholder</h3>
+
+                <div class="container underline mt-5"></div>
+                <h3 class="text-center display-6" style="font-size: 25px">Position</h3>
+                <h3 class="text-center" id="pos_memb">Placeholder</h3>
+              </div>
+            </div>
+            <div class="row my-5">
+              <div class="col-6">
+                <h1 class="text-center">Time In:</h1> 
+                <h2 class="text-center" id="timein">6:00AM</h2>
+              </div>
+              <div class="col-6">
+                <h1 class="text-center">Time Out:</h1>
+                <h2 class="text-center" id="timeout">6:00PM</h2>
+              </div>
+            </div>
+          <div class="modal-footer">
+            
+            <button type="button" class="btn btn-primary btn-success"
+            data-dismiss="modal"
+            >Exit Profile </button>
+          </div> 
+        </div>
+      </div>
+    </div>
+    </div>
+
+    
+      <!-- Enter Passcode here.  -->
+    <div class="modal fade" id="verifyPasscode" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdrop" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header bg-success">
+            <h5 class="modal-title text-light" id="staticBackdropLabel">Verify Yourself.</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <h3>Enter the Passcode for this Profile:</h3>
+            <input class="form-control" maxlength="4" id="passcodething" style="font-size: 25px; width:  60%; text-align: center; margin: auto;"> </input>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary btn-success" data-dismiss="modal" onclick="verifySelf()">Confirm</button>
+          </div> 
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Change Passcode.  -->
+
+    <div class="modal fade" id="changePass" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdrop" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header bg-success">
+            <h5 class="modal-title text-light" id="staticBackdropLabel">Change Passcode</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <h3>Change your default passcode for something else!</h3>
+            <input class="form-control" maxlength="4" id='newPassword' style="font-size: 25px; width:  60%; text-align: center; margin: auto;"> </input>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary btn-success"  data-dismiss="modal" 
+            onclick="changePass()">Confirm</button>
+          </div> 
+        </div>
+      </div>
+    </div>
+
+    <!-- Attendance has been submitted.  -->
+    <div class="modal fade" id="attendanceSent" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdrop" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header bg-success">
+            <h5 class="modal-title text-light" id="staticBackdropLabel">Attendance Submitted</h5>
+        
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <h3>Attendance has been successfully submitted!</h3>
+          </div>
+          <div class="modal-footer">
+            
+            <button type="button" class="btn btn-primary btn-success"
+            data-dismiss="modal"
+            >Confirm</button>
+          </div> 
+        </div>
+      </div>
+    </div>
+    <!-- Logout has been submitted.  -->
+    <div class="modal fade" id="logoutSent" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdrop" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header bg-success">
+            <h5 class="modal-title text-light" id="staticBackdropLabel">Logout Submitted!</h5>
+        
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <h3>Logout has been successfully submitted!</h3>
+            
+          </div>
+          <div class="modal-footer">
+            
+            <button type="button" class="btn btn-primary btn-success"
+            data-dismiss="modal"
+            >Confirm</button>
+          </div> 
+        </div>
+      </div>
+    </div>
+    
+    <!-- Invalid passcode -->
+    <div class="modal fade" id="invalidPass" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdrop" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header bg-danger">
+            <h5 class="modal-title text-light" id="staticBackdropLabel">Invalid Passcode</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <h3>You have entered the wrong passcode. Please try again.</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Passcode changed -->
+    <div class="modal fade" id="passCodeChanged" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdrop" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header bg-success">
+            <h5 class="modal-title text-light" id="staticBackdropLabel">Attendance Submitted</h5>
+        
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <h3>Passcode has been successfully changed!</h3>
+          </div>
+          <div class="modal-footer">
+            
+           
+            <button type="button" class="btn btn-primary btn-success"
+            data-dismiss="modal"
+            >Confirm</button>
+            
+          </div> 
+        </div>
+      </div>
+    </div>
+
+
+
+
+    <input type="text" id="userofuser" value="" style="display: none;">
+    <input type="text" id="userofuser2" value="" style="display: none;">
+    <input type="text" id="userofuser3" value="" style="display: none;">
+
+    <script src="JavaScript/ajaxsearch.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js
+  "
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js
+  "
+      integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/"
+      crossorigin="anonymous"
+    ></script>
+
+
+  </body>
+</html>

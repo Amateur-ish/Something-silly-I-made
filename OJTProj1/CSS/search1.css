@@ -1,0 +1,95 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #0d6efd;
+}
+
+header {
+  background-color: yellow;
+  /* padding: 30px; */
+  top: 0;
+}
+
+.underline {
+  border-bottom: 2px solid gray;
+}
+
+/* form
+{
+
+
+} */
+
+input {
+  width: 50%;
+  margin: 0 auto;
+  padding: 8px 36px 8px 36px;
+  text-align: center;
+  border: 3px solid blue;
+  border-radius: 50px;
+  font-size: 30px;
+}
+
+/* button
+{
+position: absolute;
+font-size: 25px;
+padding: 6px;
+min-width: 50px;
+border-radius: 50px;
+border: none;
+background: none;
+} */
+
+ul {
+  list-style: none;
+}
+
+ul button {
+  float: left;
+  border: none;
+  background-color: yellow;
+  font-size: 22px;
+  color: #0d6efd;
+}
+
+ul button:hover {
+  color: navy;
+  transition: 0.5s;
+}
+
+li a {
+  float: right;
+  padding-left: 10px;
+  text-decoration: none;
+  font-size: 22px;
+  margin-right: 10px;
+  color: #0d6efd;
+}
+
+li a:hover {
+  color: navy;
+  transition: 0.5s;
+}
+
+/* Home Button */
+
+span button {
+  background-color: #0d6efd;
+  padding: 10px;
+  float: left;
+  margin-left: 15px;
+  color: darkblue;
+  border: 2px solid midnightblue;
+  border-radius: 50px;
+}
+
+span button:hover {
+  background-color: navy;
+  color: yellow;
+  transition: 0.5s;
+}

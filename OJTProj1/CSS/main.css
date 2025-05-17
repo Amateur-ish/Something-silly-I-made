@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+li a 
+{   
+  text-decoration: none;  
+}
+
+li a:hover
+{
+  color: dodgerblue;
+  transition: 0.8s;
+}
+
+ul 
+{   
+  list-style: none;
+  background-color: none;
+}
+
+li 
+{   
+  display: inline;   
+  float: right;
+  margin: 0px 20px 0px 20px;
+}  
+
+.overrideli {
+  margin: 0;
+  float: none !important;
+  display: block;
+  margin: 40px 0px 40px 0px;
+}

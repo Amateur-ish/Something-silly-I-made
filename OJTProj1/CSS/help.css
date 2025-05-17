@@ -1,0 +1,220 @@
+   *
+   {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+   }
+   
+   /* Navigations and Search Bar */
+   
+   input
+   {
+     width: 65%;
+     padding: 25px;
+     text-align: center;
+     margin-bottom: 4px;
+     border: 3px solid blue;
+     border-radius: 20px;
+     outline: none;
+   }
+
+   input[type=text]
+   {
+     padding-left: 80px;
+   }
+   
+   .search-form
+   {
+     max-width: 400px;
+     margin: 0 auto;
+   }
+
+   .searchicon-btn
+   {
+     position: absolute;
+     font-size: 25px;
+     padding: 21px;
+     min-width: 50px;
+     border: none;
+     background: none;
+   }
+
+   .searchicon-btn:hover
+   {
+     color: blue;
+     transition: .6s;
+   }
+   
+   /* Help Structure Buildup */
+   
+   #wrapper
+   {
+    padding: min(5em, 8%);
+    background-color: white;
+    color: black;
+    border-radius: 1em;
+   }
+   
+   /* Light and Dark Mode Selector */
+   
+   #wrapper:has(option[value="dark"]:checked)
+   {
+     background-color: black;
+     color: white;
+     transition: 1s;
+   }
+   
+   #wrapper:has(option[value="light"]:checked)
+   {
+     transition: 1s;
+   }
+   
+   select
+   {
+     float: left;
+     padding: 1rem;
+     border: 3px solid;
+     border-radius: 1.5rem;
+     background-color: aliceblue;
+   }
+
+   select:hover
+   {
+    box-shadow: 0 0 5px 3px rgba(0, 0, 0, 0.8 inset);
+    cursor: pointer;
+    transition: 1s;
+   }
+
+   select:focus
+   {
+    color: yellow;
+    background-color: rgb(25, 37, 203);
+   }
+   
+   /* Image */
+   
+   img
+   {
+     border: 2px solid yellow;
+     border-radius: 2em;
+   }
+   
+   /* Help Icon */
+   
+   .help-symbol
+   {
+     font-size: 5rem;
+   }
+   
+   /* Navigations */
+   
+   ul
+   {
+     list-style: none;
+   }
+   
+   ul button
+   {
+     float: left; 
+     border: none; 
+     background-color: yellow; 
+     font-size: 22px; 
+     color: #0d6efd;
+   }
+   
+   ul button:hover
+   {
+     color: navy;
+     transition: 0.5s;
+   }
+   
+   li a
+   {
+     float: right; 
+     padding-left: 10px;
+     text-decoration: none; 
+     font-size: 22px;
+     margin-right: 10px;
+     color: #0d6efd;
+   }
+   
+   li a:hover
+   {
+     color: navy;
+     transition: 0.5s;
+   }
+   
+   /* Home Button */
+   
+   span button
+   {
+     background-color: #0d6efd; 
+     padding: 10px; 
+     float: left; 
+     margin-left: 15px; 
+     color: darkblue; 
+     border: 2px solid midnightblue; 
+     border-radius: 50px;
+   }
+   
+   span button:hover
+   {
+     background-color: navy;
+     color: yellow;
+     transition: 0.5s;
+   }
+   
+   /* Footer */
+   
+   footer
+   {
+    padding: min(5em, 8%);
+    border-radius: 1em;
+   }
+
+   footer a
+   {
+     text-decoration: none;
+     color: dodgerblue;
+   }
+
+   footer a:hover
+   {
+     background-color: navy;
+     color: yellow;
+     transition: 0.5s;
+   }
+   
+   /* Step Builder */
+   
+   .user-icon
+   {
+     font-size: 15px;
+   }
+   
+   .profile-shortcut-link
+   {
+     
+   }
+   
+   :root
+   {
+     counter-reset: headings;
+   }
+   
+   .step-headings
+   {
+     counter-increment: headings;
+   }
+   
+   .step-headings::before
+   {
+     content: counter(headings);
+     font-size: 30px;
+     font-weight: bold;
+     background: #1341bf;
+     padding: 5px;
+     border: 3px solid #1341bf;
+     border-radius: 20px;
+     color: yellow;
+   }
